@@ -31,23 +31,27 @@ export const Donations = () => {
     return <div>
         <div className='container mt-5'>
             <h3>Donation Addresses</h3>
+            <div className="row">
+                {[1, 2, 3, 4, 5].map(element => {
+                    return <div className="col-12 col-md-6 mb-3">
+                        <div style={{ backgroundColor: "white" }} className="align-items-center align-content-start">
+                            <div className="p-2 border" style={{ width: "content" }}>
+                                <span className="text-bold">
+                                    Transaction:
+                                </span>
+                                <span className="pl-2" style={{ fontWeight: "bold", paddingLeft: 12 }}>
+                                    2BNB Sent
+                                </span>
+                            </div>
+                            <div className="p-2 border-b border-r border-l" style={{ flex: 1 }}>
+                                <div><span style={{ color: 'gray' }}>From: 0x4156d7972091c90c3aa5b4c563187374bdfc4e69</span></div>
+                                <div><span style={{ color: 'gray' }}>Top: 0x4156d7972091c90c3aa5b4c563187374bdfc4e69</span></div>
+                            </div>
 
-
-            {[1, 2, 3, 4, 5].map(element => {
-                return <div style={{ backgroundColor: "white" }} className="p-3 d-flex align-items-center">
-                    <div className="p-3 border">
-                        Tx
+                        </div>
                     </div>
-                    <div className="px-3" style={{ flex: 1 }}>
-                        <div>From: 0x4156d7972091c90c3aa5b4c563187374bdfc4e69</div>
-                        <div>Top: 0x4156d7972091c90c3aa5b4c563187374bdfc4e69</div>
-                    </div>
-
-                    <div className="p-3 border">
-                        2BNB
-                    </div>
-                </div>
-            })}
+                })}
+            </div>
         </div>
     </div>
 }
